@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  AirClick — Главная страница
+{% endblock %}
+{% block content %}
+  <h1 class="pb-2 mb-0 text-center">Дешёвые авиабилеты на популярные направления</h1>
+  <div class="container mt-4">
+    <div class="row">
+      <!-- Карточка направления 1 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'img/destinations/moscow.png' %}"
+               class="card-img-top"
+               alt="Москва">
+          <div class="card-body">
+            <h5 class="card-title">Санкт-Петербург → Москва</h5>
+            <p class="card-text">Сердце России. Кремль. Красная площадь.</p>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary flex-grow-1">Подробнее</a>
+              <a href="#" class="btn btn-success flex-grow-1">Купить билет</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Карточка направления 2 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'img/destinations/sochi.png' %}"
+               class="card-img-top"
+               alt="Сочи">
+          <div class="card-body">
+            <h5 class="card-title">Санкт-Петербург → Сочи</h5>
+            <p class="card-text">Море и горы Олимпийской столицы.</p>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary flex-grow-1">Подробнее</a>
+              <a href="#" class="btn btn-success flex-grow-1">Купить билет</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Карточка направления 3 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'img/destinations/kazan.png' %}"
+               class="card-img-top"
+               alt="Казань">
+          <div class="card-body">
+            <h5 class="card-title">Санкт-Петербург → Казань</h5>
+            <p class="card-text">Татарская культура и казанская кухня.</p>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary flex-grow-1">Подробнее</a>
+              <a href="#" class="btn btn-success flex-grow-1">Купить билет</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Карточка направления 4 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'img/destinations/kaliningrad.png' %}"
+               class="card-img-top"
+               alt="Калининград">
+          <div class="card-body">
+            <h5 class="card-title">Санкт-Петербург → Калининград</h5>
+            <p class="card-text">Европейский стиль, янтарь и море.</p>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary flex-grow-1">Подробнее</a>
+              <a href="#" class="btn btn-success flex-grow-1">Купить билет</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Карточка направления 5 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'img/destinations/crimea.png' %}"
+               class="card-img-top"
+               alt="Крым">
+          <div class="card-body">
+            <h5 class="card-title">Санкт-Петербург → Крым</h5>
+            <p class="card-text">Солнце, пляжи и горные пейзажи.</p>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary flex-grow-1">Подробнее</a>
+              <a href="#" class="btn btn-success flex-grow-1">Купить билет</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Карточка направления 6 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'img/destinations/ekaterinburg.png' %}"
+               class="card-img-top"
+               alt="Екатеринбург">
+          <div class="card-body">
+            <h5 class="card-title">Санкт-Петербург → Екатеринбург</h5>
+            <p class="card-text">Урал и шатровое зодчество.</p>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary flex-grow-1">Подробнее</a>
+              <a href="#" class="btn btn-success flex-grow-1">Купить билет</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Карточка направления 7 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'img/destinations/vladivostok.png' %}"
+               class="card-img-top"
+               alt="Владивосток">
+          <div class="card-body">
+            <h5 class="card-title">Санкт-Петербург → Владивосток</h5>
+            <p class="card-text">Порт, мосты и дух Дальнего Востока.</p>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary flex-grow-1">Подробнее</a>
+              <a href="#" class="btn btn-success flex-grow-1">Купить билет</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Карточка направления 8 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'img/destinations/novosibirsk.png' %}"
+               class="card-img-top"
+               alt="Новосибирск">
+          <div class="card-body">
+            <h5 class="card-title">Санкт-Петербург → Новосибирск</h5>
+            <p class="card-text">Сибирская мощь, Академгородок и оперный театр.</p>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary flex-grow-1">Подробнее</a>
+              <a href="#" class="btn btn-success flex-grow-1">Купить билет</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Карточка направления 9 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'img/destinations/chita.png' %}"
+               class="card-img-top"
+               alt="Чита">
+          <div class="card-body">
+            <h5 class="card-title">Санкт-Петербург → Чита</h5>
+            <p class="card-text">Столица Забайкалья, питерская архитектура и багульник.</p>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary flex-grow-1">Подробнее</a>
+              <a href="#" class="btn btn-success flex-grow-1">Купить билет</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

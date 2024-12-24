@@ -1,0 +1,39 @@
+{% load static %}
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-lg">
+    <div class="container">
+      <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </div>
+      <a class="navbar-brand" href="{% url 'tickets:index' %}">
+        <img src="{% static 'img/logo-big.png' %}" height="30" class="d-inline-block align-top" alt="">
+        <img src="{% static 'img/logo-brand-name.png' %}" height="30" class="d-inline-block align-top" alt="">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        {% with request.resolver_match.view_name as view_name %}
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link {% if view_name == 'tickets:index' %} active active-link {% endif %}"
+                 href="{% url 'tickets:index' %}">
+                Главная
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if view_name == 'pages:about' %} active active-link {% endif %}"
+                 href="{% url 'pages:about' %}">
+                О нас
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if view_name == 'pages:contacts' %} active active-link {% endif %}"
+                 href="{% url 'pages:contacts' %}">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        {% endwith %}
+      </div>
+    </div>
+  </nav>
+</header>
