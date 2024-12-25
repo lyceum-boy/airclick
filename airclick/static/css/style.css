@@ -6,6 +6,10 @@ nav, footer {
     align-content: center !important; /* Принудительное изменение положения текста. */
 }
 
+.img-fluid {
+    border-radius: 1rem;
+}
+
 .nav-link:hover {
     color: white;
     background-color: #25acde;
