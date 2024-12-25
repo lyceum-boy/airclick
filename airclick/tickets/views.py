@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 
 from .models import Ticket
 
@@ -12,5 +12,14 @@ def index(request):
     )
     context = {
         'ticket_list': ticket_list,
+    }
+    return render(request, template_name, context)
+
+
+def ticket_detail(request, pk):
+    template_name = 'tickets/detail.html'
+    ticket = get_object_or_404(Ticket.objects.all(), pk=pk)
+    context = {
+        'ticket': ticket,
     }
     return render(request, template_name, context)
