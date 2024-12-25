@@ -1,3 +1,32 @@
 nav, footer {
     background-color: #ddeeff;
 }
+
+.nav-link:hover {
+    color: white;
+    background-color: #25acde;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Плавный переход для всех элементов. */
+.animated-card, .btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении на карточку. */
+.animated-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Эффект при наведении на кнопку. */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Анимация кнопки при клике. */
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}

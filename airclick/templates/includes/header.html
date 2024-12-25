@@ -13,19 +13,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         {% with request.resolver_match.view_name as view_name %}
           <ul class="nav nav-pills">
-            <li class="nav-item">
+            <li class="nav-item me-2">
               <a class="nav-link {% if view_name == 'tickets:index' %} active active-link {% endif %}"
                  href="{% url 'tickets:index' %}">
                 Главная
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item me-2">
               <a class="nav-link {% if view_name == 'pages:about' %} active active-link {% endif %}"
                  href="{% url 'pages:about' %}">
                 О нас
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item me-2">
               <a class="nav-link {% if view_name == 'pages:contacts' %} active active-link {% endif %}"
                  href="{% url 'pages:contacts' %}">
                 Контакты
@@ -33,19 +33,29 @@
             </li>
             {% if user.is_authenticated %}
               <div class="btn-group" role="group" aria-label="Basic outlined example">
-                <button type="button" class="btn btn-outline-primary"><a class="text-decoration-none text-reset"
-                    href="{% url 'blog:create_post' %}">Написать пост</a></button>
-                <button type="button" class="btn btn-outline-primary"><a class="text-decoration-none text-reset"
-                    href="{% url 'blog:profile' user.username %}">{{ user.username }}</a></button>
-                <button type="button" class="btn btn-outline-primary"><a class="text-decoration-none text-reset"
-                    href="{% url 'logout' %}">Выйти</a></button>
+                <button type="button" class="btn btn-outline-primary">
+                  <a class="text-decoration-none text-reset" href="{% url 'tickets:profile' user.username %}">
+                    {{ user.username }}
+                  </a>
+                </button>
+                <button type="button" class="btn btn-outline-primary">
+                  <a class="text-decoration-none text-reset" href="{% url 'logout' %}">
+                    Выйти
+                  </a>
+                </button>
               </div>
             {% else %}
               <div class="btn-group" role="group" aria-label="Basic outlined example">
-                <button type="button" class="btn btn-outline-primary"><a class="text-decoration-none text-reset"
-                    href="{% url 'login' %}">Войти</a></button>
-                <button type="button" class="btn btn-outline-primary"><a class="text-decoration-none text-reset"
-                    href="{% url 'registration' %}">Регистрация</a></button>
+                <button type="button" class="btn btn-outline-primary">
+                  <a class="text-decoration-none text-reset" href="{% url 'login' %}">
+                    Войти
+                  </a>
+                </button>
+                <button type="button" class="btn btn-outline-primary">
+                  <a class="text-decoration-none text-reset" href="{% url 'registration' %}">
+                    Регистрация
+                  </a>
+                </button>
               </div>
             {% endif %}
           </ul>
