@@ -2,6 +2,10 @@ nav, footer {
     background-color: #ddeeff;
 }
 
+.btn {
+    align-content: center !important; /* Принудительное изменение положения текста. */
+}
+
 .nav-link:hover {
     color: white;
     background-color: #25acde;
