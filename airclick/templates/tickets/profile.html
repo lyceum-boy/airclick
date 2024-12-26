@@ -8,7 +8,6 @@
     <ul class="list-group list-group-horizontal justify-content-center mb-3">
       <li class="list-group-item text-muted">Имя пользователя: {% if profile.get_full_name %}{{ profile.get_full_name }}{% else %}не указано{% endif %}</li>
       <li class="list-group-item text-muted">Регистрация: {{ profile.date_joined }}</li>
-{#      <li class="list-group-item text-muted">Роль: {% if profile.is_staff %}Админ{% else %}Пользователь{% endif %}</li>#}
     </ul>
     <ul class="list-group list-group-horizontal justify-content-center">
       {% if user.is_authenticated and request.user == profile %}
@@ -18,4 +17,22 @@
     </ul>
   </small>
   <br>
+
+    <h3 class="mb-4 text-center">История покупок</h3>
+  {% if purchase_history %}
+    <ul class="list-group">
+      {% for purchase in purchase_history %}
+        <li class="list-group-item">
+          <strong>{{ purchase.ticket.departure }} → {{ purchase.ticket.destination }}</strong>
+          <br>
+          Дата покупки: {{ purchase.purchased_at|date:"d M Y, H:i" }}
+          <br>
+          Сумма: {{ purchase.total_price }} ₽
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="text-center">У пользователя пока нет покупок.</p>
+  {% endif %}
+
 {% endblock %}

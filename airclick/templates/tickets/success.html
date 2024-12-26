@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Оплата успешно завершена</h1>
+  <p>Ваши билеты успешно куплены! Вы можете просмотреть их в истории покупок.</p>
+  <a href="{% url 'tickets:profile' user.username %}" class="btn btn-primary flex-grow-1">
+    Перейти в историю покупок</a>
+{% endblock %}

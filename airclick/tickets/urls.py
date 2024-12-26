@@ -17,4 +17,8 @@ urlpatterns = [
         views.UserUpdateView.as_view(),
         name='edit_profile'
     ),
+    path('cart/', views.cart_view, name='cart_view'),
+    path('add_to_cart/<int:ticket_id>/', views.add_to_cart, name='add_to_cart'),
+    path('checkout/', views.checkout, name='checkout'),
+    path('payment/', views.payment_success, name='payment_success'),
 ]

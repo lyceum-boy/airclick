@@ -32,7 +32,7 @@
               </a>
             </li>
             {% if user.is_authenticated %}
-              <div class="btn-group" role="group" aria-label="Basic outlined example">
+              <div class="btn-group me-2" role="group" aria-label="Basic outlined example">
                 <button type="button" class="btn btn-outline-primary">
                   <a class="text-decoration-none text-reset" href="{% url 'tickets:profile' user.username %}">
                     {{ user.username }}
@@ -45,7 +45,7 @@
                 </button>
               </div>
             {% else %}
-              <div class="btn-group" role="group" aria-label="Basic outlined example">
+              <div class="btn-group me-2" role="group" aria-label="Basic outlined example">
                 <button type="button" class="btn btn-outline-primary">
                   <a class="text-decoration-none text-reset" href="{% url 'login' %}">
                     Войти
@@ -58,6 +58,9 @@
                 </button>
               </div>
             {% endif %}
+            <a class="btn btn-success" href="{% url 'tickets:cart_view' %}">
+              Корзина
+            </a>
           </ul>
         {% endwith %}
       </div>

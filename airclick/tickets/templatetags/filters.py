@@ -19,3 +19,8 @@ def format_duration(value):
         return f"{hours} ч. {minutes} мин." if hours else f"{minutes} мин."
     except (ValueError, TypeError):
         return value
+
+
+@register.filter
+def multiply(value, arg):
+    return value * arg

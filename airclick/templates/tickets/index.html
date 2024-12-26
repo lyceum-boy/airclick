@@ -21,7 +21,12 @@
                 <a href="{% url 'tickets:ticket_detail' ticket.id %}" class="btn btn-primary flex-grow-1">
                   Подробнее
                 </a>
-                <a href="#" class="btn btn-success flex-grow-1">Купить билет</a>
+                <form method="post" action="{% url 'tickets:add_to_cart' ticket.id %}" class="d-inline-block">
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-success flex-grow-1">
+                    Купить билет
+                  </button>
+                </form>
               </div>
             </div>
           </div>
