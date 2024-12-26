@@ -26,10 +26,8 @@ SECRET_KEY = 'django-insecure-yg(prmvwt5!6pzal_419fw*00(-$mn6yc2x!i@_$lzfo+8^#5w
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    # Когда проект будет опубликован и станет доступен для пользователей,
-    # в этот список нужно будет добавить и адреса домена, где он будет размещён
+    'www.airclick.pythonanywhere.com',
+    'airclick.pythonanywhere.com',
 ]
 
 
